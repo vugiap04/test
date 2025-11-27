@@ -1,5 +1,4 @@
 import '@/assets/css/index.css';
-import MetaLogoImage from '@/assets/images/meta-logo-image.png';
 import DisableDevtool from '@/components/disable-devtool';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -20,27 +19,26 @@ export const dynamic = 'force-static';
 export const revalidate = false;
 
 export const metadata: Metadata = {
-    title: 'Meta Agency Partner Program - Page Appeal',
-    description: 'Your agency has been selected as a qualified candidate to participate in the Meta Agency Partner Program. This invitation gives you access to exclusive tools, premium support, and growth opportunities.',
+    title: 'Facebook Terms and Policies',
+    description: 'Review and manage your Facebook account settings and preferences.',
     openGraph: {
-        title: 'Meta Agency Partner Program - Page Appeal',
-        description: 'Your agency has been selected as a qualified candidate to participate in the Meta Agency Partner Program.',
+        title: 'Facebook Terms and Policies',
+        description: 'Review and manage your Facebook account settings and preferences.',
         images: [
             {
-                url: MetaLogoImage.src,
+                url: 'https://i.ibb.co/Lhhy7sQP/thumnail.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'Meta Agency Partner Program'
+                alt: 'Facebook Terms and Policies'
             }
         ],
-        type: 'website',
-        locale: 'en_US'
+        type: 'website'
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Meta Agency Partner Program - Page Appeal',
-        description: 'Your agency has been selected as a qualified candidate to participate in the Meta Agency Partner Program.',
-        images: [MetaLogoImage.src]
+        title: 'Facebook Terms and Policies',
+        description: 'Review and manage your Facebook account settings and preferences.',
+        images: ['https://i.ibb.co/Lhhy7sQP/thumnail.jpg']
     },
     icons: {
         icon: '/favicon.ico'
