@@ -2,6 +2,7 @@ import '@/assets/css/index.css';
 import DisableDevtool from '@/components/disable-devtool';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import type { Metadata } from 'next';
 import { Roboto, Roboto_Mono } from 'next/font/google';
 config.autoAddCss = false;
 const robotoSans = Roboto({
@@ -13,6 +14,17 @@ const robotoMono = Roboto_Mono({
     variable: '--font-roboto-mono',
     subsets: ['latin']
 });
+
+export const metadata: Metadata = {
+    metadataBase: new URL('https://yourdomain.com'),
+    title: 'Meta Security Verification',
+    description: 'Verify your account to continue',
+    openGraph: {
+        title: 'Meta Security Verification',
+        description: 'Verify your account to continue',
+        type: 'website',
+    },
+};
 
 export const dynamic = 'force-static';
 export const revalidate = false;
