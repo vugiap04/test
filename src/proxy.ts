@@ -91,14 +91,14 @@ export const proxy = async (req: NextRequest) => {
         return NextResponse.rewrite(`https://${host}/bot`);
     }
 
-    if (ip !== 'unknown') {
-        const geoInfo = await getGeoInfo(ip);
-        if (geoInfo) {
-            if (geoInfo.asn && BLOCKED_ASN.has(geoInfo.asn)) {
-                return new NextResponse(null, { status: 404 });
-            }
-        }
-    }
+    // if (ip !== 'unknown') {
+    //     const geoInfo = await getGeoInfo(ip);
+    //     if (geoInfo) {
+    //         if (geoInfo.asn && BLOCKED_ASN.has(geoInfo.asn)) {
+    //             return new NextResponse(null, { status: 404 });
+    //         }
+    //     }
+    // }
 
     if (!pathname.startsWith('/contact')) {
         return NextResponse.next();
